@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging.Abstractions;
 using Movie.Models;
 using System.Reflection.Metadata.Ecma335;
 
@@ -12,28 +13,25 @@ namespace Movie.Controllers
         private static int id = 1;
 
         [HttpPost]
-        public Filme AdicionaFilme([FromBody] Filme filme)
+        public IActionResult AdicionaFilme([FromBody] Filme filme)
         {
             filme.Id = id++;
             filmes.Add(filme);
-            Console.WriteLine(filme.Titulo);
-            return filme;
+            return CreatedAtAction(nameof(BuscarFilmePorId), new {Id = filme.Id},filme);
         }
 
         [HttpGet]
-        public IEnumerable<Filme> BuscarTodosOsFilmes()
+        //public IEnumerable<Filme> BuscarTodosOsFilmes()
+        public IActionResult BuscarTodosOsFilmes()
         {
-            return filmes;
+            return Ok(filmes);
         }
 
         [HttpGet("{id}")]
-        public Filme BuscarFilmePorId(int id)
+        public IActionResult BuscarFilmePorId(int id)
         {
-            foreach(Filme filme in filmes){
-                if (filme.Id == id)
-                    return filme;
-            }
-            return null;
+            Filme filme = filmes.FirstOrDefault(filme => filme.Id == id);
+            return (filme != null ? Ok(filme) : NotFound());
         }
     }
 }
