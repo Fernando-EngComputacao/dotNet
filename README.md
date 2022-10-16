@@ -27,16 +27,37 @@ Este é um projeto ASP NET Core API REST.
   ```Ferramentas``` > ```Gerenciador de Pacotes do NuGet``` > ```Gerenciar Pacotes do NuGet para a Solução...```
 - **2° Ação:** na abra do ```NuGet - Solução```, acesse o submenu ```Procurar``` e pesquise por:
 
-
+```v-5.0.5```
 ~~~
-EntityFrameWorkCore v-5.0.5
+EntityFrameWorkCore
 ~~~ 
+```v-5.0.3```
 ~~~
-Mysql.EntityFrameWorkCore v-5.0.3
+Mysql.EntityFrameWorkCore 
 ~~~
 
 ## 1.3 Configuração Banco de Dados
 - **1° Ação:** crie uma pasta, na raiz, de nome ```Data```
-- **1° Ação:** crie uma classe na pasta ```Data``` de nome ```FilmeContext```
+- **2° Ação:** crie uma classe na pasta ```Data``` de nome ```FilmeContext```
+- **3° Ação:** acesse o ```appsettings.json```
+- **4° Ação:** no arquivo acessado, encontre por ```"AllowedHosts": "*"``` e adicione abaixo a seguinte expressão:
+~~~
+,
+"ConnectionStrings": {
+    "FilmeConnection": "server=localhost;database=filmeDb;user=root;password=root"
+}
+~~~
+- **5° Ação:** acesse, na raiz, o arquivo ```Startup.cs```
+- **6° Ação:** encontre a função: 
+
+```public void ConfigureServices(IServiceCollection service)```
+- **7° Ação:** nesta função, faça a seguinte configuração:
+~~~
+services.AddDbContext<FilmesContext>(opts => opts.UseMySQL(STRING-DE-CONEXAO));
+~~~
+Substitua em ```STRING-DE-CONEXAO``` (acima no códgio) a sua string de conexão, que neste caso é:
+~~~
+Configuration.GetConnectionString("FilmeConnection")
+~~~
 
 
