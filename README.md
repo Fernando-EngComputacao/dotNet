@@ -50,7 +50,7 @@ Mysql.EntityFrameWorkCore
 - **5° Ação:** acesse, na raiz, o arquivo ```Startup.cs```
 - **6° Ação:** encontre a função: 
 
-```public void ConfigureServices(IServiceCollection service)```
+    ```public void ConfigureServices(IServiceCollection service)```
 - **7° Ação:** nesta função, faça a seguinte configuração:
 ~~~
 services.AddDbContext<FilmesContext>(opts => opts.UseMySQL(STRING-DE-CONEXAO));
