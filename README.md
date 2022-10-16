@@ -22,56 +22,21 @@ Este é um projeto ASP NET Core API REST.
     ~~~
     "applicationUrl": "https://localhost:5000;http://localhost:5001",
     ~~~ 
-- **2° Ação:**
+### 1.2.1 Configuração de Dependências
+- **1° Ação:** abra o gerenciador de dependências em: 
+  ```Ferramentas``` > ```Gerenciador de Pacotes do NuGet``` > ```Gerenciar Pacotes do NuGet para a Solução...```
+- **2° Ação:** na abra do ```NuGet - Solução```, acesse o submenu ```Procurar``` e pesquise por:
 
-## Configurações do projeto no Spring Start  
-- **Project:** Maven Project 
-- **Language:** Java
-- **Spring Boot:** 2.7.4
-- **Packagem:** JAR
-- **Java:** 11
-- **Dependeces:** 
-    - Spring Web
-    - H2 Database
-    - Spring Data JPA
-    - Spring Boot DevTools
-    - Spring Data JDBC
-    - Validation
 
- ## Properties (application.properties)
-**Propriedades:** entre em -> src/main/resources/application.properties
-~~~bash  
-server.port=8081
-
-# data source
-spring.datasource.driver-class-name=org.h2.Driver
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.url=jdbc:h2:mem:alura-forum
-spring.datasource.username=sa
-spring.datasource.password=
-
-# jpa
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.properties.hibernate.show_sql=true
-spring.jpa.properties.hibernate.format_sql=true
-
-# Nova propriedade a partir da versao 2.5 do Spring Boot:
-spring.jpa.defer-datasource-initialization=true
-
-# h2
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
+~~~
+EntityFrameWorkCore v-5.0.5
+~~~ 
+~~~
+Mysql.EntityFrameWorkCore v-5.0.3
 ~~~
 
-**Base de dados:** entre em -> src/main/resources e crie um documento de nome (data.sql). Após copie e cole o código abaixo: 
+## 1.3 Configuração Banco de Dados
+- **1° Ação:** crie uma pasta, na raiz, de nome ```Data```
+- **1° Ação:** crie uma classe na pasta ```Data``` de nome ```FilmeContext```
 
-~~~bash  
-INSERT INTO MOVIE(nome, genero, duracao, posicao) VALUES('Advenders Ultimato','Fantasia',215,1);
-INSERT INTO MOVIE(nome, genero, duracao, posicao) VALUES('Avatar 2','Aventura',255,2);
-INSERT INTO MOVIE(nome, genero, duracao, posicao) VALUES('Procurando Nemo','Fantasia',185,3);
-INSERT INTO MOVIE(nome, genero, duracao, posicao) VALUES('Minha mãe é uma peça','Drama',225,4);
-INSERT INTO MOVIE(nome, genero, duracao, posicao) VALUES('Adão Negro','Fantasia',205,5);
-INSERT INTO MOVIE(nome, genero, duracao, posicao) VALUES('Iti','Terror',195,6);
-~~~
 
