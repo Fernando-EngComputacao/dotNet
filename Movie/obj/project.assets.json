@@ -1778,11 +1778,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fernando.furtado\\source\\repos\\Movie\\Movie\\Movie.csproj",
+      "projectUniqueName": "C:\\Users\\fernando.furtado\\source\\repos\\dotNet\\Movie\\Movie.csproj",
       "projectName": "Movie",
-      "projectPath": "C:\\Users\\fernando.furtado\\source\\repos\\Movie\\Movie\\Movie.csproj",
+      "projectPath": "C:\\Users\\fernando.furtado\\source\\repos\\dotNet\\Movie\\Movie.csproj",
       "packagesPath": "C:\\Users\\fernando.furtado\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fernando.furtado\\source\\repos\\Movie\\Movie\\obj\\",
+      "outputPath": "C:\\Users\\fernando.furtado\\source\\repos\\dotNet\\Movie\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fernando.furtado\\AppData\\Roaming\\NuGet\\NuGet.Config",

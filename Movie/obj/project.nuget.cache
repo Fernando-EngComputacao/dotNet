@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d0WM3eGFNWzC+EcK/zkbfXlN2gDFYPaousDmAaJG6OABsnMAQzHgitBwwrByXJYLGDFyvYRKCRKFHuK7Soh1SA==",
+  "dgSpecHash": "TN7LVWSaRwedWxf7ITNwzwnT+v8/1ZE/EU8QRUQaMH/PdKNgQVkZ+r9A+VWKk+qCxnVW4MbefoP6nBTSipr7kQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\fernando.furtado\\source\\repos\\Movie\\Movie\\Movie.csproj",
+  "projectFilePath": "C:\\Users\\fernando.furtado\\source\\repos\\dotNet\\Movie\\Movie.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fernando.furtado\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\fernando.furtado\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
